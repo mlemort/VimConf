@@ -55,12 +55,14 @@ highlight CursorLine	term=bold cterm=bold ctermbg=235
 
 " Buffer manip
 nnoremap <silent> <S-a> :bprevious<CR>
-inoremap <silent> <S-a> <Esc>:bprevious<CR>
 nnoremap <silent> <S-d> :bnext<CR>
-inoremap <silent> <S-d>   <Esc>:bnext<CR>
 nnoremap <silent> <leader>d :bp <BAR> bd #<CR>
 nnoremap <S-Left> <C-w>h
+inoremap <S-Left> <ESC><C-w>h
 nnoremap <S-Down> <C-w>j
+inoremap <S-Down> <ESC><C-w>j
 nnoremap <S-Up> <C-w>k
+inoremap <S-Up> <ESC><C-w>k
 nnoremap <S-Right> <C-w>l
+inoremap <S-Right> <ESC><C-w>l
 
