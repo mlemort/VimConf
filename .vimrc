@@ -1,6 +1,7 @@
 "My conf :
 set nu
 set cc=80
+set ruler
 syntax on
 set mouse=a
 set noswapfile
