@@ -55,7 +55,6 @@ set hlsearch
 highlight CursorLine	term=bold cterm=bold ctermbg=235
 
 " Buffer manip
-nnoremap <silent> <S-a> :bprevious<CR>
 nnoremap <silent> <S-d> :bnext<CR>
 nnoremap <silent> <leader>d :bp <BAR> bd #<CR>
 nnoremap <S-Left> <C-w>h
