@@ -1,68 +1,59 @@
-"My conf :
-set nu
-set cc=80
-set ruler
-syntax on
+" Tell vim to behave like vim and not vi
+set nocompatible
+
+" Show line number
+set number
+
+" Enable mouse
 set mouse=a
-set noswapfile
-let mapleader = ","
 
-set winaltkeys=no
-set showcmd
-set showmode
+" Enable color
+syntax on
 
-set title
-set titleold=
-set cursorline
-set history=1000
+" Make tab space = 4
+set tabstop=4
 
+" Make good indentation
 set smartindent
 set autoindent
 
-"Non-expanded, 4-wide tabulations
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+" Hightlight searching words
+set hlsearch
 
-"Disable vi-compatibility
-set nocompatible
+" Better case matching on search
+set ignorecase
+set smartcase
 
-"Real-world encoding
-set encoding=utf-8
+" Show search in real time
+set incsearch
 
-"Interpret modelines in files
-set modelines=1
-
-"Do not abandon buffers
-set hidden
-
-"Don't bother throttling tty
-set ttyfast
-
-"More useful backspace behavior
-set backspace=indent,eol,start
+" Make the path recursive
+set path+=**
 
 "Use statusbar on all windows
 set laststatus=2
 
-"Better search
-set ignorecase
-set smartcase
-set incsearch
-set showmatch
-set hlsearch
+" Greater autompletion on commands
+set wildmenu
 
-highlight CursorLine	term=bold cterm=bold ctermbg=235
+" Show cursorline
+set cursorline
+highlight CursorLine term=bold cterm=bold ctermbg=235
 
-" Buffer manip
-nnoremap <silent> <S-d> :bnext<CR>
-nnoremap <silent> <leader>d :bp <BAR> bd #<CR>
-nnoremap <S-Left> <C-w>h
-inoremap <S-Left> <ESC><C-w>h
-nnoremap <S-Down> <C-w>j
-inoremap <S-Down> <ESC><C-w>j
-nnoremap <S-Up> <C-w>k
-inoremap <S-Up> <ESC><C-w>k
-nnoremap <S-Right> <C-w>l
-inoremap <S-Right> <ESC><C-w>l
+" Tell vim to not use swapfiles (.swp)
+set noswapfile
 
+" Enable the delete key
+set bs=2
+
+" Enable pluggin for netrw
+filetype plugin on
+
+" Hide banner in netrw pluggin
+let g:netrw_banner=0
+
+" Enable the tree view in netwr
+let g:netrw_liststyle=3
+
+" Create command to use ctags
+command! MakeTags !ctags -R .
